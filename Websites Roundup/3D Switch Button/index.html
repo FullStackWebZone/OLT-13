@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
+		<label class="switch">
+    <input type="checkbox">
+    <div>
+        <canvas></canvas>
+    </div>
+    <span>Switch</span>
+</label>
+
+<label class="switch">
+    <input type="checkbox" checked>
+    <div>
+        <canvas></canvas>
+    </div>
+    <span>Switch</span>
+</label>
+
+<!-- dribbble -->
+<a class="dribbble" href="https://dribbble.com/shots/7063524-3D-Switch-animation" target="_blank"><img src="https://cdn.dribbble.com/assets/dribbble-ball-mark-2bd45f09c2fb58dbbfb44766d5d1d07c5a12972d602ef8b32204d28fa3dda554.svg" alt=""></a>
+		<script type="text/javascript">
+			$('.switch').each(function() {
+
+    let toggle = $(this),
+        input = toggle.children('input'),
+        $canvas = toggle.find('canvas'),
+        canvas = $canvas[0],
+        renderer = new THREE.WebGLRenderer({
+            canvas: canvas,
+            context: canvas.getContext('webgl2'),
+            antialias: true,
+            alpha: true
+        });
+
+    renderer.setSize(40, 40);
+    renderer.setPixelRatio(window.devicePixelRatio ? window.devicePixelRatio * 2 : 2);
+
+    renderer.shadowMap.enabled = true;
+
+    let scene = new THREE.Scene();
+        camera = new THREE.PerspectiveCamera(45, $canvas.width() / $canvas.height(), 0.1, 1000);
+
+    camera.position.z = 92;
+
+    let shape = new THREE.CylinderGeometry(16, 16, 8, 20);
+    let material = new THREE.MeshPhongMaterial({
+        color: 0xE4ECFA,
+        shininess: 20,
+        opacity: .96,
+        transparent: true
+    });
+    let donut = new THREE.Mesh(shape, material);
+
+    scene.add(donut);
+
+    let lightTop = new THREE.DirectionalLight(0xFFFFFF, .6);
+    lightTop.position.set(0, 60, 60);
+    lightTop.castShadow = true;
+    scene.add(lightTop);
+
+    let right = new THREE.DirectionalLight(0xFFFFFF, .5);
+    right.position.set(20, 20, 40);
+    right.castShadow = true;
+    scene.add(right);
+
+    let left = new THREE.DirectionalLight(0xFFFFFF, .5);
+    left.position.set(-20, 20, 40);
+    left.castShadow = true;
+    scene.add(left);
+
+    let active = new THREE.DirectionalLight(0x275EFE, .8);
+    active.position.set(0, -80, 20);
+    active.castShadow = true;
+    scene.add(active);
+
+    scene.add(new THREE.AmbientLight(0x6C7486));
+
+    var render = function() {
+
+        requestAnimationFrame(render);
+
+        TweenMax.render();
+
+        renderer.render(scene, camera);
+
+    };
+
+    render();
+
+    input.on('change', e => {
+        let checked = input.is(':checked'),
+            z = !checked ? THREE.Math.degToRad(0) : THREE.Math.degToRad(90),
+            x = !checked ? THREE.Math.degToRad(90) : THREE.Math.degToRad(0);
+        TweenMax.to(donut.rotation, 3, {
+            ease: Elastic.easeOut.config(!checked ? 1.16 : 1.04, !checked ? .32 : .36),
+            z: z,
+            x: x
+        });
+        active.intensity = !checked ? .4 : .8;
+        active.color.setHex(!checked ? 0xFFFFFF : 0x275EFE);
+    }).trigger('change');
+
+});
+
+		</script>
+	</body>
+</html>

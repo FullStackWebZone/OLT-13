@@ -1,0 +1,42 @@
+BODY {
+	 background: #000;
+}
+ .svg-fulscreen {
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 width: 100%;
+	 height: 100%;
+	 transform: translateZ(200px);
+}
+ .heart__fill-circle {
+	 transform-origin: 400px 300px;
+	 animation: rotation 17s infinite alternate;
+}
+ .heart__fill-circle:nth-child(6n + 1) {
+	 animation-delay: -2s;
+}
+ .heart__fill-circle:nth-child(6n + 2) {
+	 animation-delay: -1s;
+}
+ .heart__fill-circle:nth-child(6n + 3) {
+	 animation-delay: -2.5s;
+}
+ .heart__fill-circle:nth-child(6n + 4) {
+	 animation-delay: -0.5s;
+}
+ .heart__fill-circle:nth-child(6n + 5) {
+	 animation-delay: -1.5s;
+}
+ @keyframes rotation {
+	 0% {
+		 transform: rotate(0);
+	}
+	 50% {
+		 transform: rotate(180deg);
+	}
+	 100% {
+		 transform: rotate(360deg);
+	}
+}
+ 

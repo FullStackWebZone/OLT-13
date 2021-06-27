@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	
+	</head>
+	<body>
+		<input type="radio" id="correct-orbit-size" name="orbit-size" /><input type="radio" id="ideal-orbit-size" name="orbit-size" checked="checked" /><input type="radio" id="real-time" name="velocity" /><input type="radio" id="one-year-per-minute" name="velocity" checked="checked" /><input type="radio" id="one-year-per-second" name="velocity" /><input type="radio" id="topview" name="perspective" /><input type="radio" id="isometric" name="perspective" /><input type="radio" id="threedee" name="perspective" checked="checked" />
+<div class="universe">
+    <div class="solarsystem">
+        <div class="sun">
+            <div class="planet__structure planet__structure--1"></div>
+            <div class="planet__structure planet__structure--2"></div>
+            <div class="planet__structure planet__structure--3"></div>
+            <div class="planet__structure planet__structure--4"></div>
+            <div class="planet__structure planet__structure--5"></div>
+            <div class="planet__structure planet__structure--6"></div>
+        </div>
+        <div class="mercury-orbit sun-orbit">
+            <div class="ascending-node ascending-node--mercury">
+                <div class="inclination inclination--mercury">
+                    <div class="orbit__visual"></div>
+                    <div class="orbit__shape orbit__shape--mercury">
+                        <div class="planet mercury">
+                            <div class="planet__structure planet__structure--1"></div>
+                            <div class="planet__structure planet__structure--2"></div>
+                            <div class="planet__structure planet__structure--3"></div>
+                            <div class="planet__structure planet__structure--4"></div>
+                            <div class="planet__structure planet__structure--5"></div>
+                            <div class="planet__structure planet__structure--6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="venus-orbit sun-orbit">
+            <div class="ascending-node ascending-node--venus">
+                <div class="inclination inclination--venus">
+                    <div class="orbit__visual"></div>
+                    <div class="orbit__shape orbit__shape--venus">
+                        <div class="planet venus">
+                            <div class="planet__structure planet__structure--1"></div>
+                            <div class="planet__structure planet__structure--2"></div>
+                            <div class="planet__structure planet__structure--3"></div>
+                            <div class="planet__structure planet__structure--4"></div>
+                            <div class="planet__structure planet__structure--5"></div>
+                            <div class="planet__structure planet__structure--6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="earth-orbit sun-orbit">
+            <div class="ascending-node ascending-node--earth">
+                <div class="inclination inclination--earth">
+                    <div class="orbit__visual"></div>
+                    <div class="orbit__shape orbit__shape--earth">
+                        <div class="planet earth">
+                            <div class="planet__structure planet__structure--1"></div>
+                            <div class="planet__structure planet__structure--2"></div>
+                            <div class="planet__structure planet__structure--3"></div>
+                            <div class="planet__structure planet__structure--4"></div>
+                            <div class="planet__structure planet__structure--5"></div>
+                            <div class="planet__structure planet__structure--6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mars-orbit sun-orbit">
+            <div class="ascending-node ascending-node--mars">
+                <div class="inclination inclination--mars">
+                    <div class="orbit__visual"></div>
+                    <div class="orbit__shape orbit__shape--mars">
+                        <div class="planet mars">
+                            <div class="planet__structure planet__structure--1"></div>
+                            <div class="planet__structure planet__structure--2"></div>
+                            <div class="planet__structure planet__structure--3"></div>
+                            <div class="planet__structure planet__structure--4"></div>
+                            <div class="planet__structure planet__structure--5"></div>
+                            <div class="planet__structure planet__structure--6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jupiter-orbit sun-orbit">
+            <div class="ascending-node ascending-node--jupiter">
+                <div class="inclination inclination--jupiter">
+                    <div class="orbit__visual"></div>
+                    <div class="orbit__shape orbit__shape--jupiter">
+                        <div class="planet jupiter">
+                            <div class="planet__structure planet__structure--1"></div>
+                            <div class="planet__structure planet__structure--2"></div>
+                            <div class="planet__structure planet__structure--3"></div>
+                            <div class="planet__structure planet__structure--4"></div>
+                            <div class="planet__structure planet__structure--5"></div>
+                            <div class="planet__structure planet__structure--6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="saturn-orbit sun-orbit">
+            <div class="ascending-node ascending-node--saturn">
+                <div class="inclination inclination--saturn">
+                    <div class="orbit__visual"></div>
+                    <div class="orbit__shape orbit__shape--saturn">
+                        <div class="planet saturn">
+                            <div class="planet__structure planet__structure--1"></div>
+                            <div class="planet__structure planet__structure--2"></div>
+                            <div class="planet__structure planet__structure--3"></div>
+                            <div class="planet__structure planet__structure--4"></div>
+                            <div class="planet__structure planet__structure--5"></div>
+                            <div class="planet__structure planet__structure--6"></div>
+                        </div>
+                        <div class="planet-orbit planet-orbit--saturn">
+                            <div class="rings-of-saturn"> </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="uranus-orbit sun-orbit">
+            <div class="ascending-node ascending-node--uranus">
+                <div class="inclination inclination--uranus">
+                    <div class="orbit__visual"></div>
+                    <div class="orbit__shape orbit__shape--uranus">
+                        <div class="planet uranus">
+                            <div class="planet__structure planet__structure--1"></div>
+                            <div class="planet__structure planet__structure--2"></div>
+                            <div class="planet__structure planet__structure--3"></div>
+                            <div class="planet__structure planet__structure--4"></div>
+                            <div class="planet__structure planet__structure--5"></div>
+                            <div class="planet__structure planet__structure--6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="neptun-orbit sun-orbit">
+            <div class="ascending-node ascending-node--neptun">
+                <div class="inclination inclination--neptun">
+                    <div class="orbit__visual"></div>
+                    <div class="orbit__shape orbit__shape--neptun">
+                        <div class="planet neptun">
+                            <div class="planet__structure planet__structure--1"></div>
+                            <div class="planet__structure planet__structure--2"></div>
+                            <div class="planet__structure planet__structure--3"></div>
+                            <div class="planet__structure planet__structure--4"></div>
+                            <div class="planet__structure planet__structure--5"></div>
+                            <div class="planet__structure planet__structure--6"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="content">
+    <h1>The Solar System</h1>
+    <div class="controls">
+        <div class="controls__group"><span>Orbit Size:</span><label class="button correct-size" for="correct-orbit-size">Correct</label><label class="button ideal-size" for="ideal-orbit-size">Idealized</label></div>
+        <div class="controls__group"><span>Velocity:</span><label class="button real-time" for="real-time">Realtime</label><label class="button one-year-per-minute" for="one-year-per-minute">1 Year / Min</label><label class="button one-year-per-second" for="one-year-per-second">1 Year / Sec</label></div>
+        <div class="controls__group"><span>Perspective:</span><label class="button threedee" for="threedee">3d</label><label class="button topview" for="topview">Top</label><label class="button isometric" for="isometric">Isometric</label></div>
+    </div>
+</div>
+		<script type="text/javascript">
+			//For those who wonder why Javascript is here, a short explanation. This script only ensures that the initial position, the planetary position is calculated correctly by setting the seconds left since 1-1-2019 to a css custom variable. No hidden Magic 🤷
+
+let timestamp_start = new Date("2019-01-01").getTime();
+let timestamp_now = new Date().getTime();
+let secondsLeft = (timestamp_now - timestamp_start) / 1000;
+let root = document.documentElement;
+root.style.setProperty('--seconds-left', `${secondsLeft}s`);
+		</script>
+	</body>
+</html>

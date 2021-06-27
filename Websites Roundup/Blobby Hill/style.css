@@ -1,0 +1,22 @@
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  filter: url(#goo);
+  cursor: none;
+}
+
+.blobby-bit {
+  width: 160px;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.blobby-bg {
+  height: 240px;
+  width: 240px;
+  border-radius: 50%;
+  background: #fbbb95;
+}
